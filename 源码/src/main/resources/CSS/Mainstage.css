@@ -1,0 +1,222 @@
+
+.tooltip{
+    -fx-font-size: 13px;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 40px;
+}
+
+/* 修改TabPane的Pane区域背景颜色 */
+.tab-pane {
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+/* 修改Tab的背景颜色 */
+.tab{
+    -fx-background-color: #f6f6f6;
+    -fx-border-color: #f6f6f6;
+}
+/* 修改顶栏的背景颜色 */
+.tab-pane>*.tab-header-area>*.tab-header-background
+{
+    -fx-background-color: #f6f6f6;
+    -fx-border-color: #f6f6f6;
+}
+.tab-pane>*.tab-header-area{
+    -fx-border-color: #f6f6f6;
+}
+
+.tab:selected{
+    -fx-background-color: #f6f6f6;
+    -fx-border-color: #f6f6f6;
+}
+
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: #f6f6f6;
+}
+
+#exitUserButton{
+    -fx-text-alignment: center;
+    -fx-background-color: #f47983;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#exitUserButton:hover{
+    -fx-background-color: #ff9ba2;
+}
+
+#changePWDButton{
+    -fx-text-alignment: center;
+    -fx-background-color: #fde590;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#changePWDButton:hover{
+    -fx-background-color: #ffeaae;
+}
+
+#roomAddButton{
+    -fx-text-alignment: center;
+    -fx-background-color: #86cdff;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#roomAddButton:hover{
+    -fx-background-color: #bbdff8;
+}
+#chatClearButton{
+    -fx-text-alignment: center;
+    -fx-background-color: #fde590;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#chatClearButton:hover{
+    -fx-background-color: #ffeaae;
+}
+#chatSubmitButton{
+    -fx-text-alignment: center;
+    -fx-background-color: #86cdff;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#chatSubmitButton:hover{
+    -fx-background-color: #aad5fd;
+}
+
+#chatMsgArea .label{
+    -fx-font-size: 15;
+}
+
+
+#quitRoomButton{
+    -fx-text-alignment: center;
+    -fx-background-color: #f47983;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#quitRoomButton:hover{
+    -fx-background-color: #ff9ba2;
+}
+
+#toSearchRoomButton{
+    -fx-text-alignment: center;
+    -fx-background-color: #fde590;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#toSearchRoomButton:hover{
+    -fx-background-color: #ffeaae;
+}
+
+#toCreateRoomButton{
+    -fx-text-alignment: center;
+    -fx-background-color: #86cdff;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#toCreateRoomButton:hover{
+    -fx-background-color: #b5deff;
+}
+#toChatButton{
+    -fx-text-alignment: center;
+    -fx-background-color: #86cdff;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#toChatButton:hover{
+    -fx-background-color: #aad8f8;
+}
+#toSearchRoomButton1{
+    -fx-text-alignment: center;
+    -fx-background-color: #86cdff;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#toSearchRoomButton1:hover{
+    -fx-background-color: #addafa;
+}
+
+#toCreateRoomButton1{
+    -fx-text-alignment: center;
+    -fx-background-color: #fde590;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#toCreateRoomButton1:hover{
+    -fx-background-color: #ffeaae;
+}
+
+#enterRoomButton{
+    -fx-text-alignment: center;
+    -fx-background-color:  #fde590;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+#enterRoomButton:hover{
+    -fx-background-color: #fae3aa;
+}
+.hyperlink{
+    -fx-text-fill: #000000;
+    -fx-border-color: transparent;
+}
+
+.hyperlink:hover{
+    -fx-text-fill: #00b7ff;
+    -fx-border-color: transparent;
+}
+
+.hyperlink:focused{
+    -fx-text-fill: #61cef8;
+    -fx-border-color: transparent;
+}
+#copyLink{
+    -fx-text-alignment: right;
+    -fx-text-fill: #00b7ff;
+    -fx-pref-width: 200px;
+}

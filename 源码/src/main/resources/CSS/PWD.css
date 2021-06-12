@@ -1,0 +1,28 @@
+
+#confirm{
+    -fx-text-alignment: center;
+    -fx-background-color: #B7E89E;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#confirm:hover{
+    -fx-background-color: #a8d492;
+}
+
+#cancel{
+    -fx-text-alignment: center;
+    -fx-background-color: #fde590;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+}
+
+#cancel:hover{
+    -fx-background-color: #f5dd8b;
+}

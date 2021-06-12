@@ -1,0 +1,66 @@
+
+
+#loginButton{
+    -fx-text-alignment: center;
+    -fx-background-color: white;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 60px;
+    -fx-pref-height: 30px;
+    -fx-font-size: 12.5;
+}
+
+#loginButton:hover{
+    -fx-background-color: #e8e8e8;
+}
+
+#toLoginButton{
+    -fx-text-alignment: center;
+    -fx-background-color: white;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 60px;
+    -fx-pref-height: 30px;
+    -fx-font-size: 12.5;
+}
+
+#toLoginButton:hover{
+    -fx-background-color: #e8e8e8;
+}
+
+#registerButton{
+    -fx-text-alignment: center;
+    -fx-background-color: white;
+    -fx-border-radius: 5px;
+    -fx-pref-width: 60px;
+    -fx-font-size: 12.5;
+}
+
+#registerButton:hover{
+    -fx-background-color: #e8e8e8;
+}
+
+#linkToRegister{
+    -fx-text-fill: white;
+}
+
+#linkToRegister:hover{
+    -fx-text-fill: black;
+}
+
+#linkToRegister:focused{
+    -fx-text-fill: azure;
+}
+#linkToRegister1{
+    -fx-text-fill: #ffffff;
+    -fx-border-color: transparent;
+}
+
+#linkToRegister1:hover{
+    -fx-text-fill: black;
+    -fx-border-color: transparent;
+}
+
+#linkToRegister1:focused{
+    -fx-text-fill: #1a1a1a;
+    -fx-border-color: transparent;
+}
+

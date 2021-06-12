@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../CSS/Mainstage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Stage.MainStage">
+   <children>
+      <TabPane fx:id="navBar" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="1000.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="50.0" tabMaxWidth="50.0" tabMinHeight="50.0" tabMinWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+            <Tab fx:id="homePage" onSelectionChanged="#enterHome">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="homeBG" fitHeight="600.0" fitWidth="939.0" pickOnBounds="true" preserveRatio="true" />
+                        <AnchorPane fx:id="bg" layoutX="41.0" layoutY="181.0" prefHeight="600.0" prefWidth="939.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="welcomeLabel" layoutX="40.0" layoutY="155.0" prefHeight="129.0" prefWidth="854.0" text="亲爱的xxx，欢迎进入云端聊天室！">
+                                 <font>
+                                    <Font size="34.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="47.0" layoutY="514.0" prefHeight="40.0" prefWidth="373.0" text="联系电话：18811590305" textFill="#8a8989" wrapText="true" />
+                              <Button fx:id="changePWDButton" layoutX="590.0" layoutY="292.0" mnemonicParsing="false" onAction="#changePWD" prefHeight="35.0" prefWidth="88.0" text="修改密码" />
+                              <Label layoutX="47.0" layoutY="477.0" prefHeight="40.0" prefWidth="373.0" text="当您在聊天途中发现有违规情况，请及时联系我们！" textFill="#8a8989" wrapText="true" />
+                              <Label layoutX="47.0" layoutY="441.0" prefHeight="40.0" prefWidth="373.0" text="版权出品，侵权必究" textFill="#8a8989" wrapText="true" />
+                              <Separator layoutX="26.0" layoutY="253.0" prefHeight="13.0" prefWidth="831.0" />
+                              <Button fx:id="exitUserButton" layoutX="750.0" layoutY="292.0" mnemonicParsing="false" onAction="#quitSystem" prefHeight="35.0" prefWidth="89.0" text="退出登录" />
+                              <Button fx:id="toChatButton" layoutX="430.0" layoutY="292.0" mnemonicParsing="false" onAction="#toChat" prefHeight="35.0" prefWidth="87.0" text="去聊天" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+              </content>
+               <graphic>
+                  <Label>
+                     <graphic>
+                        <ImageView fx:id="headImg" disable="true" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="主页" />
+                     </tooltip>
+                  </Label>
+               </graphic>
+            </Tab>
+          <Tab fx:id="chatList" onSelectionChanged="#enterChat">
+               <graphic>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="14.0">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="聊天列表">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Tooltip>
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="chatIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Label>
+               </graphic>
+             <content>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                   <children>
+                        <AnchorPane fx:id="chatPane1" layoutX="13.0" layoutY="26.0" prefHeight="598.0" prefWidth="933.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fx:id="chattingBG" fitHeight="598.0" fitWidth="933.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="quitRoomButton" layoutX="529.0" layoutY="540.0" mnemonicParsing="false" onAction="#quitRoom" text="退出房间" />
+                            <Button fx:id="chatSubmitButton" layoutX="789.0" layoutY="540.0" mnemonicParsing="false" onAction="#submitChatMsg" text="发送" />
+                            <TextArea fx:id="inputMsgArea" layoutX="9.0" layoutY="442.0" prefHeight="89.0" prefWidth="913.0">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font></TextArea>
+                            <Button fx:id="chatClearButton" layoutX="659.0" layoutY="540.0" mnemonicParsing="false" onAction="#clearInput" text="清空" />
+                            <Label fx:id="roomTitle" layoutX="29.0" layoutY="18.0" prefHeight="32.0" prefWidth="682.0" text="这是测试聊天室">
+                               <font>
+                                  <Font size="24.0" />
+                               </font>
+                            </Label>
+                              <Label fx:id="sendMsgErrorLabel" layoutX="15.0" layoutY="551.0" prefHeight="20.0" prefWidth="347.0" textFill="#e40707" />
+                            <ScrollPane fx:id="scroll" hbarPolicy="NEVER" layoutX="9.0" layoutY="71.0" prefHeight="362.0" prefWidth="911.0">
+                                 <content>
+                                    <FlowPane fx:id="chatMsgArea" layoutX="20.0" layoutY="15.0" prefHeight="352.0" prefWidth="884.0" style="-fx-padding: 10;" />
+                                 </content>
+                            </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="chatPane2" layoutX="41.0" layoutY="181.0" prefHeight="598.0" prefWidth="933.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fx:id="chatBG" fitHeight="598.0" fitWidth="933.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="toSearchRoomButton" layoutX="285.0" layoutY="352.0" mnemonicParsing="false" onAction="#toSearchRoom" text="搜索聊天室" />
+                              <Button fx:id="toCreateRoomButton" layoutX="498.0" layoutY="352.0" mnemonicParsing="false" onAction="#toCreateRoom" text="创建聊天室" />
+                              <Label layoutX="201.0" layoutY="217.0" prefHeight="89.0" prefWidth="522.0" text="糟糕，你还没有加入任何聊天室哦~" wrapText="true">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="quitTip" layoutX="200.0" layoutY="200.0" prefHeight="600.0" prefWidth="939.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="195.0" layoutY="190.0" prefHeight="125.0" prefWidth="550.0" text="糟糕，这个房间被房主解散了呢！" textFill="#c35858">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="toSearchRoomButton1" layoutX="481.0" layoutY="346.0" mnemonicParsing="false" onAction="#toSearchRoom" text="搜索聊天室" />
+                              <Button fx:id="toCreateRoomButton1" layoutX="260.0" layoutY="346.0" mnemonicParsing="false" onAction="#toCreateRoom" text="创建聊天室" />
+                           </children>
+                        </AnchorPane>
+                   </children>
+                </AnchorPane>
+             </content>
+          </Tab>
+            <Tab fx:id="search" onSelectionChanged="#enterSearch">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="searchBG" fitHeight="598.0" fitWidth="933.0" pickOnBounds="true" preserveRatio="true" />
+                        <TextField fx:id="searchNameInput" layoutX="147.0" layoutY="93.0" prefHeight="45.0" prefWidth="423.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font></TextField>
+                        <Button fx:id="enterRoomButton" layoutX="616.0" layoutY="134.0" mnemonicParsing="false" onAction="#searchRoom" prefHeight="23.0" prefWidth="129.0" text="进入房间">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="searchNameError" layoutX="236.0" layoutY="141.0" prefHeight="20.0" prefWidth="414.0" textFill="#eb0707" />
+                        <Label fx:id="searchPwdError" layoutX="236.0" layoutY="220.0" prefHeight="20.0" prefWidth="422.0" textFill="#eb0707" />
+                        <Label layoutX="39.0" layoutY="103.0" text="房间名称">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="58.0" layoutY="181.0" text="密码">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="33.0" layoutY="241.0" prefHeight="12.0" prefWidth="676.0" />
+                        <Label layoutX="33.0" layoutY="239.0" prefHeight="68.0" prefWidth="175.0" text="当前聊天室">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane layoutX="32.0" layoutY="308.0" prefHeight="267.0" prefWidth="872.0">
+                           <content>
+                              <FlowPane fx:id="chatRoomList" prefHeight="195.0" prefWidth="851.0" />
+                           </content>
+                        </ScrollPane>
+                        <Hyperlink layoutX="173.0" layoutY="266.0" onAction="#getRoomList" text="点击更新" />
+                        <Label layoutX="249.0" layoutY="21.0" prefHeight="58.0" prefWidth="160.0" text="加入房间">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="searchPwdInput" layoutX="146.0" layoutY="169.0" prefHeight="48.0" prefWidth="425.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font></PasswordField>
+                        <Label layoutX="688.0" layoutY="280.0" prefHeight="20.0" prefWidth="181.0" text="Tips：悬停查看房间描述" textFill="#9a9797">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="roomListEmptyLabel" layoutX="300.0" layoutY="400.0" prefHeight="53.0" prefWidth="398.0" text="当前暂无聊天室，请点击更新">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+               <graphic>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="50.0">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="搜索">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Tooltip>
+                     </tooltip>
+                     <graphic>
+                        <ImageView fx:id="searchIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </Label>
+               </graphic>
+            </Tab>
+            <Tab fx:id="create" onSelectionChanged="#enterAdd">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="bg2" layoutX="54.0" layoutY="37.5" prefHeight="598.0" prefWidth="933.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fx:id="createBG" fitHeight="598.0" fitWidth="933.0" pickOnBounds="true" preserveRatio="true" />
+                              <TextField fx:id="roomAddPwd" layoutX="238.0" layoutY="200.5" prefHeight="52.0" prefWidth="477.0">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="130.0" layoutY="321.203125" strokeType="OUTSIDE" strokeWidth="0.0" text="描述" wrappingWidth="47.0">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Text>
+                              <Label fx:id="roomNameErrorMsg" layoutX="250.0" layoutY="170.0" prefHeight="20.0" prefWidth="395.0" style="-fx-text-fill: red;" />
+                              <TextArea fx:id="roomAddDescription" layoutX="237.0" layoutY="296.5" prefHeight="222.0" prefWidth="479.0">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </TextArea>
+                              <Button fx:id="roomAddButton" layoutX="427.0" layoutY="543.5" mnemonicParsing="false" onAction="#submitRoomInfo" text="创建" />
+                              <Label fx:id="roomPwdErrorMsg" layoutX="250.0" layoutY="260.0" prefHeight="20.0" prefWidth="434.0" style="-fx-text-fill: red;" />
+                              <Text layoutX="100.0" layoutY="146.203125" strokeType="OUTSIDE" strokeWidth="0.0" text="聊天室名称" wrappingWidth="145.0">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="44.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="创建聊天室" wrappingWidth="199.30029296875">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="roomAddName" layoutX="238.0" layoutY="118.5" prefHeight="45.0" prefWidth="476.0">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="130.0" layoutY="233.1875" strokeType="OUTSIDE" strokeWidth="0.0" text="密码" wrappingWidth="65.30029296875">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+               <graphic>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="50.0">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="addIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip styleClass="tip" text="创建聊天室">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </Label>
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+       <fx:include source="MainStageTitle.fxml" />
+   </children>
+</AnchorPane>

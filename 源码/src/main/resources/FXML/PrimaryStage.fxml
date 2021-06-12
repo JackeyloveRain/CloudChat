@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="Primary" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../CSS/PrimaryStage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Stage.PrimaryStage">
+   <children>
+      <AnchorPane fx:id="registerBlock" maxHeight="400.0" maxWidth="300.0" minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0">
+         <children>
+            <ImageView fx:id="registerBg" fitHeight="400.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+            <AnchorPane fx:id="registerMsg" layoutX="-20.0" layoutY="83.0" prefHeight="300.0" prefWidth="300.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="5.0" prefHeight="20.0" prefWidth="90.0" text="用户名">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <TextField fx:id="username" layoutX="110.0" prefHeight="35.0" prefWidth="170.0" />
+                  <Label alignment="CENTER" layoutX="22.0" layoutY="69.0" prefHeight="20.0" prefWidth="90.0" text="密码">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <TextField fx:id="password1" layoutX="110.0" layoutY="64.0" prefHeight="35.0" prefWidth="170.0" />
+                  <Label fx:id="pwd1ErrorMsg" layoutX="70.0" layoutY="101.0" prefWidth="270.0" textFill="#e80c0c" visible="false" />
+                  <Label alignment="CENTER" layoutX="22.0" layoutY="189.0" prefHeight="20.0" prefWidth="90.0" text="邮箱">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Button fx:id="registerButton" layoutX="149.0" layoutY="265.0" mnemonicParsing="false" onAction="#register" text="注册" />
+                  <TextField fx:id="email" layoutX="110.0" layoutY="184.0" prefHeight="35.0" prefWidth="170.0" />
+                  <TextField fx:id="password2" layoutX="110.0" layoutY="124.0" prefHeight="35.0" prefWidth="170.0" />
+                  <Label fx:id="pwd2ErrorMsg" layoutX="70.0" layoutY="160.0" prefWidth="270.0" textFill="#e80c0c" visible="false" />
+                  <Label fx:id="usernameErrorMsg" layoutX="70.0" layoutY="37.0" prefWidth="270.0" textFill="#e80c0c" visible="false" />
+                  <Label alignment="CENTER" layoutX="22.0" layoutY="129.0" prefHeight="20.0" prefWidth="95.0" text="重复密码">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="emailErrorMsg" layoutX="70.0" layoutY="221.0" prefWidth="270.0" textFill="#e80c0c" visible="false" />
+                  <Hyperlink fx:id="linkToRegister1" layoutX="173.0" layoutY="241.0" onAction="#moveToLogin" text="已有账号？去登陆！" />
+               </children>
+            </AnchorPane>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="19.0" prefHeight="35.0" prefWidth="100.0" text="注册" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Button fx:id="toLoginButton" layoutX="120.0" layoutY="250.0" mnemonicParsing="false" onAction="#moveToLogin" text="去登陆" visible="false" />
+            <Text fx:id="registerSuccessMsg" layoutX="30.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="恭喜你注册成功！" visible="false">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loginBlock" layoutX="300.0" maxHeight="400.0" maxWidth="300.0" minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0">
+         <children>
+            <ImageView fx:id="loginBg" fitHeight="400.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="loginButton" layoutX="130.0" layoutY="342.0" mnemonicParsing="false" onAction="#login" text="登录" />
+            <TextField fx:id="usernameLogin" layoutX="65.0" layoutY="165.0" prefHeight="35.0" prefWidth="200.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="170.0" prefHeight="25.0" prefWidth="55.0" text="用户名" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="4.0" layoutY="230.0" prefHeight="25.0" prefWidth="50.0" text="密码" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameErrorLogin" layoutX="80.0" layoutY="205.0" prefWidth="150.0" textFill="#fc0303" />
+            <Label fx:id="pwdErrorLogin" layoutX="80.0" layoutY="265.0" prefWidth="150.0" textFill="#fb0303" />
+            <Hyperlink fx:id="linkToRegister" layoutX="150.0" layoutY="285.0" onAction="#moveToRegister" text="没有账号？注册一个" />
+            <StackPane layoutX="90.0" layoutY="25.0" prefHeight="133.0" prefWidth="145.0">
+               <padding>
+                  <Insets topRightBottomLeft="5" />
+               </padding>
+               <!--阴影效果-->
+               <effect>
+                  <DropShadow>
+                     <radius>5</radius>
+                     <offsetY>2.0</offsetY>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image backgroundLoading="true" url="@/IMG/user1.png" />
+                     </image>
+                     <fitWidth>100.0</fitWidth>
+                     <fitHeight>100.0</fitHeight>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <PasswordField fx:id="passwordLogin" layoutX="65.0" layoutY="225.0" prefHeight="35.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="moveBlock" layoutX="-0.0" layoutY="-0.0" maxHeight="400.0" maxWidth="300.0" minHeight="400.0" minWidth="300.0" prefHeight="400.0" prefWidth="300.0">
+         <children>
+            <ImageView fx:id="moveBg" fitHeight="400.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="21.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cloud" wrappingWidth="161.30029296875">
+               <font>
+                  <Font name="Arial Bold" size="49.0" />
+               </font>
+            </Text>
+            <Text layoutX="45.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="云端聊天室" wrappingWidth="137.0">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="144.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="让沟通更简单！" wrappingWidth="155.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <fx:include source="PrimaryStageTitle.fxml" />
+   </children>
+</AnchorPane>
